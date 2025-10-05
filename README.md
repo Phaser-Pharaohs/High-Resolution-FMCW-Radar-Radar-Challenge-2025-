@@ -26,7 +26,7 @@ Summary of changes:
 
 - **Filters**  
   - Replaced *LFCW-1062+* with *LFCW-1142+* (TX/RX path)  
-  - Removed *BFCN-1052+* on TX path  
+  - Removed *BFCN-1052+* on TX path (override the filter)
   - Optional IF bandpass filter for SNR improvement  
 - **Local Oscillator**: HMC735 VCO extended to **9.5–12.6 GHz**  
 - **Antennas**  
@@ -46,13 +46,11 @@ Summary of changes:
 ## Repository Structure  
 ```
 ├── hardware/          
-│   ├── horns/         # STL models for 12 dBi and 18 dBi horn antennas
-│   ├── vivaldi/       # ODB++ files for Vivaldi PCB antenna
-│   └── docs/          # Antenna datasheets and fabrication notes
-├── software/          # Python/Matlab scripts for data acquisition & processing
-├── experiments/       # Test datasets (sandbox rods, RAAC panels)
-├── docs/              # Challenge documentation and presentations
-│   ├── IEEE-Challenge-Flyer.pdf
+│   ├── Horn antennas/       # STL models for 12 dBi and 18 dBi horn antennas
+│   └── vivaldi antenna/     # ODB++ files for Vivaldi PCB antenna
+├── software/                # Python scripts for data acquisition & processing
+├── experiments/             # Test datasets (sandbox rods, RAAC panels)
+├── docs/                    # Challenge documentation and presentations
 │   ├── PhaserPharaohs_Presentation.pptx
 │   └── Modifications.docx
 └── README.md
